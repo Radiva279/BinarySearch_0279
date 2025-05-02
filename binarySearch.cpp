@@ -96,3 +96,10 @@ void binarySearch()
     }
 } // step 10
 
+int main()
+{
+    input();
+    bubbleSortArray();
+    display();
+    binarySearch();
+}
