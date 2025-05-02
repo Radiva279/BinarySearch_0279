@@ -68,3 +68,31 @@ void display()
     }
 }
 
+void binarySearch()
+{
+    cout << " Masukkan Element Yang Ingin Dicari = " << endl;
+    cin >> x;                // step 1
+    int low = 0;             // step 2
+    int high = nPanjang - 1; // step3
+    do
+    {
+        int mid = (low + high) / 2; // step 4
+        if (element[mid] == x)
+        { 
+            cout << "Ditemukan Pada Index ke-" << mid << endl; //step 5.a
+            return; //step 5.b
+        }
+        if (x < element[mid]) //step 6
+        {
+            high = mid - 1; //step 6.a
+        }
+        if (x > element[mid]){ //step 7
+            low = mid +1; //step 7.a
+        }
+    } while (low <= high); //step 8
+    if (low > high)
+    {
+        cout << x << "Tidak Ditemukan" << endl; //step 9
+    }
+} // step 10
+
